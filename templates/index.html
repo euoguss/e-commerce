@@ -27,6 +27,8 @@
                   Produtos
                 </a>
                 <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Todos produtos</a></li>
+                  <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Armazenamentos</a></li>
                   <li><a class="dropdown-item" href="#">Fontes de alimentação</a></li>
                   <li><a class="dropdown-item" href="#">Gabinetes</a></li>
@@ -39,7 +41,7 @@
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit"><img src="/assets/lupa.png" alt="Imagem pesquisa" width="15px" height="15px"></a></button>
+              <button class="btn btn-outline-success" type="submit"><img src="{{url_for('static', filename='assets/lupa.png')}}" alt="Imagem pesquisa" width="15px" height="15px"></a></button>
             </form>
           </div>
         </div>
