@@ -1,21 +1,27 @@
 import mysql.connector
 
-# Conectando ao banco de dados
+class bancoDeDados:
 
-base = mysql.connector.connect(
-    user='root', password='',
-    host='127.0.0.1',
-    database='ecommerce'
-)
+    def __init__(self, conexao = mysql.connector.connect(user='root', password='', host='localhost', database='mydb')):
+        self.conexao = conexao
 
+    def connect(self):
+        if self.conexao.is_connected():
+            print('Conectado ao banco')
 
-try: 
-    # Criando as tabelas
+    def singup(self, values):
+        cursor = self.conexao.cursor()
 
-    TABLES = {}
-    TABLES['']
+        try:
+            sql = "INSERT INTO clientes(CPF, Nome, Email, Senha, Telefone, Endereco, Nascimento) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+            
+            cursor.execute(sql, values)
+            self.conexao.commit()
+            print(f'{cursor.rowcount} registro inserido.')
+            ...
+        except:
+            ...
+        ...
 
-except:
-    ...
-
-base.close()
+    def disconnect(self):
+        self.conexao.close()
