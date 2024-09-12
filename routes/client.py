@@ -8,11 +8,26 @@ client_route = Blueprint("client", __name__)
 def add_client():
     return render_template("form_add_user.html")
 
-@client_route.route("/add", methods=['POST'])
+@client_route.route("/", methods=['GET','POST'])
 def insert_client():
-    data = request.json
-    values = (data)
-    db.singup(values)
+    if request.method == "POST":
+        Nome = request.form['Nome']
+        Email = request.form['Email']
+        Senha = request.form['Senha']
+        Cpf = request.form['Cpf']
+        Nasc = f"{request.form['NascA']}-{request.form['NascM']}-{request.form['NascD']}"
+        Ender = request.form['Ender']
+        Tel = request.form['Tel']
+        values = (Cpf,Nome,Email,Senha,Tel,Ender,Nasc)
+        db.singup(values)
+        # print(values)
+
+        ...
+    # data = request.json
+    # print(data)
+    # values = (data)
+    # 
+    return render_template('form_add_user.html')
     ...
 
 @client_route.route("/acount")
