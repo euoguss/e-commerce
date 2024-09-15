@@ -4,11 +4,11 @@ from database.database import bancoDeDados
 db = bancoDeDados()
 client_route = Blueprint("client", __name__)
 
-@client_route.route("/add")
-def add_client():
-    return render_template("form_add_user.html")
+# @client_route.route("/add")
+# def add_client():
+#     return render_template("form_add_user.html")
 
-@client_route.route("/", methods=['GET','POST'])
+@client_route.route("/add", methods=['GET', 'POST'])
 def insert_client():
     if request.method == "POST":
         Nome = request.form['Nome']
@@ -20,6 +20,7 @@ def insert_client():
         Tel = request.form['Tel']
         values = (Cpf,Nome,Email,Senha,Tel,Ender,Nasc)
         db.singup(values)
+        return render_template("login.html")
         # print(values)
 
         ...
@@ -27,8 +28,18 @@ def insert_client():
     # print(data)
     # values = (data)
     # 
-    return render_template('form_add_user.html')
+    return render_template("form_add_user.html")
     ...
+
+@client_route.route("/login", methods=['GET', 'POST'])
+def singin():
+    if request.method == "POST":
+        Email = request.form['Email']
+        Senha = request.form['Senha']
+        values = (Email,Senha)
+        db.singin(values)
+        return render_template("acount.html")
+    return render_template("login.html")
 
 @client_route.route("/acount")
 def acount():

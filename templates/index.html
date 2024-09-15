@@ -39,7 +39,9 @@
                   <li><a class="dropdown-item" href="#">Refrigerações</a></li>
                 </ul>
             </ul>
-            <form class="d-flex" role="search">
+            <button class="btn btn-outline-success" type="submit"><a href="{{url_for('client.singin')}}"><img src="{{ url_for('static', filename='assets/carrinho.png')}}" alt="Imagem carrinho" width="21px" height="21px"></a></button>
+            <form class="d-flex" role="search" style="padding: 5px;">
+              <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
               <button class="btn btn-outline-success" type="submit"><img src="{{url_for('static', filename='assets/lupa.png')}}" alt="Imagem pesquisa" width="15px" height="15px"></a></button>
             </form>
