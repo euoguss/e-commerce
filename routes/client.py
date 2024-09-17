@@ -1,7 +1,7 @@
 from flask import Flask, Blueprint, render_template, request
-from database.database import bancoDeDados
+from database.database import BancoDeDados
 
-db = bancoDeDados()
+db = BancoDeDados()
 client_route = Blueprint("client", __name__)
 
 # @client_route.route("/add")
@@ -9,7 +9,7 @@ client_route = Blueprint("client", __name__)
 #     return render_template("form_add_user.html")
 
 @client_route.route("/add", methods=['GET', 'POST'])
-def insert_client():
+def singup():
     if request.method == "POST":
         Nome = request.form['Nome']
         Email = request.form['Email']
@@ -33,14 +33,14 @@ def insert_client():
 
 @client_route.route("/login", methods=['GET', 'POST'])
 def singin():
-    if request.method == "POST":
-        Email = request.form['Email']
-        Senha = request.form['Senha']
-        values = (Email,Senha)
-        db.singin(values)
-        return render_template("acount.html")
-    return render_template("login.html")
+        if request.method == "POST":
+            Email = request.form['Email']
+            Senha = request.form['Senha']
+            values = (Email,Senha)
+            db.singin(values)
+            return render_template("index.html")
+        return render_template("login.html")
 
 @client_route.route("/acount")
 def acount():
-    return render_template("acount.html")
+    return render_template("acount.html", dados = db.verify())

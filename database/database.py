@@ -1,10 +1,9 @@
 import mysql.connector
-from controller.controller import login
-log = login()
-class bancoDeDados:
+class BancoDeDados:
     
-    def __init__(self, conexao = mysql.connector.connect(user='root', password='', host='localhost', database='mydb')):
+    def __init__(self, conexao = mysql.connector.connect(user='root', password='', host='localhost', database='mydb'), login = None):
         self.conexao = conexao
+        self.login = login
         
 
     def connect(self):
@@ -32,15 +31,32 @@ class bancoDeDados:
     def singin(self, values):
         cursor = self.conexao.cursor()
         try:
-            sql = "SELECT * FROM clientes WHERE Email = %s AND Senha = %d"
-            
+            sql = "SELECT * FROM clientes WHERE Email = %s AND Senha = %s"
             cursor.execute(sql, values)
-            result = cursor.fetchall()
-            log.verify(result)
+            self.login = []
+            for row in cursor:
+                for d in row:
+                    self.login.append(d)
+            print(f'Os dados são {self.login}')
             cursor.close()
-            return f'{result}'
         except:
-            return "Erro ao buscar o usuario"
+            print("Erro ao buscar o usuario")
 
+    
+
+    def verify(self):
+        try:
+            values = self.login
+            # for v in values:
+            #     print(v)
+                # self.login.get(value).append(values[value])
+                
+            self.login = {'Cpf' : values[0], 'Nome' : values[1],'Email' : values[2],'Senha' : values[3], 'Tel' : values[4], 'Ender' : values[5], 'Nasc' : values[6]}
+            
+            print(f'Login verificado com sucesso {self.login}')
+            return self.login
+        except:
+            print('Erro ao verificar o login')
+    
     def disconnect(self):
         self.conexao.close()

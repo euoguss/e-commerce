@@ -1,10 +1,10 @@
 from flask import Flask, render_template, url_for
 from routes.client import client_route
 from routes.home import home_route
-from database.database import bancoDeDados
+from database.database import BancoDeDados
 
 app = Flask(__name__)
-db = bancoDeDados()
+db = BancoDeDados()
 db.connect()
 
 app.register_blueprint(home_route)

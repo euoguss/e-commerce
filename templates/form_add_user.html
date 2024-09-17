@@ -23,7 +23,7 @@
     nasc   
      -->
 
-     <form class="row g-3" style="margin-left: 30%; margin-right: 30%;" action="{{url_for('client.insert_client')}}" method="POST">
+     <form class="row g-3" style="margin-left: 30%; margin-right: 30%;" action="{{url_for('client.singup')}}" method="POST">
         <div class="col-12">
           <label for="inputName" class="form-label">Nome</label>
           <input type="text" name="Nome" class="form-control" id="inputAddress" placeholder="Digite seu nome">
@@ -100,6 +100,7 @@
         <div class="col-12">
           <button type="submit" class="btn btn-primary" style="margin-left: 40%; margin-right: 30%;">Cadastrar-se</button>
         </div>
+        <a href="{{ url_for('client.singin')}}">Clique para entrar</a>
       </form>
 
     <!-- Optional JavaScript; choose one of the two! -->
