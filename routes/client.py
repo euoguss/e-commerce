@@ -44,3 +44,8 @@ def singin():
 @client_route.route("/acount")
 def acount():
     return render_template("acount.html", dados = db.verify())
+
+@client_route.route("/cart")
+def cart():
+    
+    return render_template("cart.html")

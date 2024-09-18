@@ -1,0 +1,10 @@
+.dados-list {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #8A2BE2;
+}
+
+.dados-list li {
+    margin-bottom: 10px;
+}
