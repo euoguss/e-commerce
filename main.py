@@ -8,9 +8,9 @@ app = Flask(__name__)
 db = BancoDeDados()
 db.connect()
 
-app.register_blueprint(product_route)
 app.register_blueprint(home_route)
 app.register_blueprint(client_route, url_prefix='/client')
+app.register_blueprint(product_route, url_prefix='/product')
 
 app.run(debug=True)
 db.disconnect()
