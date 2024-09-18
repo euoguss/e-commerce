@@ -1,51 +1,53 @@
+
+
 /* Controla a altura das imagens do carrossel */
 .carousel-inner img {
-    height: 400px;  /* Define uma altura fixa para as imagens */
-  }
-  /* Ajusta o tamanho dos botões de controle */
+  height: 400px;  /* Define uma altura fixa para as imagens */
+}
+/* Ajusta o tamanho dos botões de controle */
 .carousel-control-prev, .carousel-control-next {
-    width: 5%;  /* Altera a largura dos botões de controle */
-  }
-  
-  /* Personaliza os indicadores do carrossel */
+  width: 5%;  /* Altera a largura dos botões de controle */
+}
+
+/* Personaliza os indicadores do carrossel */
 .carousel-indicators [data-bs-target] {
-    background-color: black;  /* Cor dos pontos indicativos */
-  }
-  
-  /* Indicador ativo */
+  background-color: black;  /* Cor dos pontos indicativos */
+}
+
+/* Indicador ativo */
 .carousel-indicators .active {
-    background-color: white;  /* Cor do ponto indicativo ativo */
-  }
+  background-color: white;  /* Cor do ponto indicativo ativo */
+}
 
 .card-title{
-  font-family: Arial;
-  color:black;
-  font-size: 20px;
+font-family: Arial;
+color:black;
+font-size: 20px;
 }
 .card-text {
-    font-family: Arial;
-    font-size: 20px;
-    color: red;
-    text-decoration: line-through;
-  }
+  font-family: Arial;
+  font-size: 20px;
+  color: red;
+  text-decoration: line-through;
+}
 
 .card-text-1 {
-    font-family: Arial;
-    font-size: 20px;
-    color: red;
-  }
+  font-family: Arial;
+  font-size: 20px;
+  color: red;
+}
 
 .link{
-  color: black;
-  text-decoration: none;
+color: black;
+text-decoration: none;
 }
 
 .card-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
 }
 
 .gradient-background{
-  background: linear-gradient(to right, #af0ddf, #20b2b6);
+background: linear-gradient(to right, #af0ddf, #20b2b6);
 }

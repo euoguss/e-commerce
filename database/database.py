@@ -58,5 +58,6 @@ class BancoDeDados:
         except:
             print('Erro ao verificar o login')
     
-    def disconnect(self):
+    def addCart(self):
+        
         self.conexao.close()
