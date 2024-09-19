@@ -1,5 +1,5 @@
 from flask import Flask, Blueprint, render_template, request
-from database.database import BancoDeDados
+from database.database import BancoDeDados 
 
 db = BancoDeDados()
 client_route = Blueprint("client", __name__)
@@ -43,8 +43,10 @@ def singin():
 
 @client_route.route("/acount")
 def acount():
-    return render_template("acount.html", dados = db.verify())
-
+    dt = db.verify()
+    if dt != None:
+       return render_template("acount.html", dados = dt)
+    return render_template("login.html")
 @client_route.route("/cart")
 def cart():
     
