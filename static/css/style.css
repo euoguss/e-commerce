@@ -2,7 +2,8 @@
 
 /* Controla a altura das imagens do carrossel */
 .carousel-inner img {
-  height: 400px;  /* Define uma altura fixa para as imagens */
+  width: 100%;
+  height: auto;  /* Define uma altura fixa para as imagens */
 }
 /* Ajusta o tamanho dos botões de controle */
 .carousel-control-prev, .carousel-control-next {
@@ -50,4 +51,43 @@ justify-content: space-between;
 
 .gradient-background{
 background: linear-gradient(to right, #af0ddf, #20b2b6);
+}
+
+.container-fluid{
+  background-color: rgba(175, 13, 223, 0.7);
+}
+
+.prod-txt{
+  font-family: Arial;
+  font-size: 20px;
+  color: red;  
+}
+
+h1{
+  margin-bottom: 40px;
+}
+
+.txt-sub{
+  font-family: Arial;
+  font-size: 30px;
+  color: red;
+  text-decoration: line-through;
+  text-align: center;
+}
+
+.txt-new{
+  font-family: Arial;
+  font-size: 35px;
+  color: red;
+  text-align: center;
+}
+
+.container-produto {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+h3{
+  font-size: 24px;
 }

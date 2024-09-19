@@ -8,7 +8,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">GMG TECH</a>
+          <a class="navbar-brand" href="{{url_for('home.home')}}">GMG TECH</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -49,15 +49,20 @@
     </nav>
     <div class="container mt-5">
         <div class="row">
+          <h1>Gabinete Gamer Lian Li Dynamic Mini-X O11, PC Tower, ATX, Lateral em Vidro Temperado, Preto - O11DMINI-X</h1>
             <div class="col-md-6">
                 <img src="{{url_for('static', filename='assets/gabinete1.jpeg')}}" class="img-fluid" alt="Imagem do Produto">
             </div>
             <div class="col-md-6">
-                <h1>Gabinete Gamer Lian Li Dynamic Mini-X O11, PC Tower, ATX, Lateral em Vidro Temperado, Preto - O11DMINI-X</h1>
-                <h2>De R$680,00</h2>
-                <h2>Por R$520,00</h2>
-                <p>Descrição detalhada do produto. Inclua todas as informações relevantes que o cliente precisa saber.</p>
-                <button class="btn btn-primary btn-lg">Comprar</button>
+              <h3>O Gabinete Gamer Lian Li Dynamic Mini-X O11 é a escolha perfeita para quem busca um design elegante e funcionalidade avançada. Com painéis de vidro temperado e uma estrutura robusta, este gabinete oferece uma excelente combinação de estética e desempenho.</h3><br>
+                <div class="prod-txt">
+                  <h2 class="txt-sub">De R$680,00</h2>
+                  <h2 class="txt-new">Por R$520,00</h2>
+                </div>
+                <br>
+                <div class="container-produto">
+                  <button class="btn btn-primary btn-lg" style="align-self: center;">Comprar</button>
+                </div>
             </div>
         </div>
     </div>    
