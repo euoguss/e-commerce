@@ -61,3 +61,7 @@ class BancoDeDados:
     def addCart(self):
         
         self.conexao.close()
+
+    def disconnect(self):
+        self.conexao.close()
+        print('Desconectado do banco')
