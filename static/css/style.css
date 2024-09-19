@@ -1,20 +1,21 @@
 
-
-/* Controla a altura das imagens do carrossel */
 .carousel-inner img {
-  height: 400px;  /* Define uma altura fixa para as imagens */
+  width: 100%;
+  height: auto; 
+} 
+.prod-img{
+  width: 500px; 
+  height: 500px;
 }
-/* Ajusta o tamanho dos botões de controle */
 .carousel-control-prev, .carousel-control-next {
-  width: 5%;  /* Altera a largura dos botões de controle */
+  width: 5%;
 }
 
-/* Personaliza os indicadores do carrossel */
 .carousel-indicators [data-bs-target] {
-  background-color: black;  /* Cor dos pontos indicativos */
+  background-color: black;
 }
 
-/* Indicador ativo */
+
 .carousel-indicators .active {
   background-color: white;  /* Cor do ponto indicativo ativo */
 }
@@ -50,4 +51,74 @@ justify-content: space-between;
 
 .gradient-background{
 background: linear-gradient(to right, #af0ddf, #20b2b6);
+}
+
+.prod-txt{
+  font-family: Arial;
+  font-size: 20px;
+  color: red;  
+}
+
+h1{
+  margin-bottom: 40px;
+}
+
+.txt-sub{
+  font-family: Arial;
+  font-size: 25px;
+  color: red;
+  text-decoration: line-through;
+  text-align: center;
+}
+
+.txt-new{
+  font-family: Arial;
+  font-size: 30px;
+  color: red;
+  text-align: center;
+}
+
+.container-produto {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.container-produto .btn-primary{
+  background-color: #af0ddf;
+  border-color: black;
+}
+
+.prod-spec .btn-primary{
+  background-color: #af0ddf;
+  border-color: black;
+}
+
+h3{
+  font-size: 24px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+.promo-timer {
+  margin-top: 5px;
+}
+
+#countdown {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.prod-spec {
+  display: grid;
+  place-items: center;
+}
+
+.btn-primary {
+  grid-column: 1 / -1;
 }
