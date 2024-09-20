@@ -1,72 +1,124 @@
-.dados-list {
-    list-style: none;
-    padding: 0;
-    font-size: 18px;
-    color: #8A2BE2;
-}
 
-.dados-list li {
-    margin-bottom: 10px;
-}
-
-/* Controla a altura das imagens do carrossel */
 .carousel-inner img {
-    height: 400px;  /* Define uma altura fixa para as imagens */
-  }
-  /* Ajusta o tamanho dos botões de controle */
+  width: 100%;
+  height: auto; 
+} 
+.prod-img{
+  width: 500px; 
+  height: 500px;
+}
 .carousel-control-prev, .carousel-control-next {
-    width: 5%;  /* Altera a largura dos botões de controle */
-  }
-  
-  /* Personaliza os indicadores do carrossel */
+  width: 5%;
+}
+
 .carousel-indicators [data-bs-target] {
-    background-color: black;  /* Cor dos pontos indicativos */
-  }
-  
-  /* Indicador ativo */
+  background-color: black;
+}
+
+
 .carousel-indicators .active {
-    background-color: white;  /* Cor do ponto indicativo ativo */
-  }
+  background-color: white;  /* Cor do ponto indicativo ativo */
+}
 
 .card-title{
-  font-family: Arial;
-  color:black;
-  font-size: 20px;
+font-family: Arial;
+color:black;
+font-size: 20px;
 }
 .card-text {
-    font-family: Arial;
-    font-size: 20px;
-    color: red;
-    text-decoration: line-through;
-  }
+  font-family: Arial;
+  font-size: 20px;
+  color: red;
+  text-decoration: line-through;
+}
 
 .card-text-1 {
-    font-family: Arial;
-    font-size: 20px;
-    color: red;
-  }
+  font-family: Arial;
+  font-size: 20px;
+  color: red;
+}
 
 .link{
-  color: black;
-  text-decoration: none;
+color: black;
+text-decoration: none;
 }
 
 .card-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
 }
 
 .gradient-background{
-  background: linear-gradient(to right, #af0ddf, #20b2b6);
+background: linear-gradient(to right, #af0ddf, #20b2b6);
 }
 
-.container-fluid{
-    background-color: #8A2BE2;
+.prod-txt{
+  font-family: Arial;
+  font-size: 20px;
+  color: red;  
 }
 
-.navbar-brand:hover{
-    background-color: #20b2b6;
-    border-radius: 10px;
-    color: #8A2BE2;
+h1{
+  margin-bottom: 40px;
+}
+
+.txt-sub{
+  font-family: Arial;
+  font-size: 25px;
+  color: red;
+  text-decoration: line-through;
+  text-align: center;
+}
+
+.txt-new{
+  font-family: Arial;
+  font-size: 30px;
+  color: red;
+  text-align: center;
+}
+
+.container-produto {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.container-produto .btn-primary{
+  background-color: #af0ddf;
+  border-color: black;
+}
+
+.prod-spec .btn-primary{
+  background-color: #af0ddf;
+  border-color: black;
+}
+
+h3{
+  font-size: 24px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+.promo-timer {
+  margin-top: 5px;
+}
+
+#countdown {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.prod-spec {
+  display: grid;
+  place-items: center;
+}
+
+.btn-primary {
+  grid-column: 1 / -1;
 }
