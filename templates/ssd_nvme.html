@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SSD 2 TB Kingston Fury Renegade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{url_for('home.home')}}">GMG TECH</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('client.acount')}}">Minha conta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" 
+                aria-current="page" href="#">Ofertas do dia</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Produtos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Todos produtos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Armazenamentos</a></li>
+                  <li><a class="dropdown-item" href="#">Fontes de alimentação</a></li>
+                  <li><a class="dropdown-item" href="#">Gabinetes</a></li>
+                  <li><a class="dropdown-item" href="#">Memórias RAM</a></li>
+                  <li><a class="dropdown-item" href="#">Placas mãe</a></li>
+                  <li><a class="dropdown-item" href="#">Processadores</a></li>
+                  <li><a class="dropdown-item" href="#">Placas de vídeo</a></li>
+                  <li><a class="dropdown-item" href="#">Refrigerações</a></li>
+                </ul>
+            </ul>
+            <button class="btn btn-outline-success" type="submit"><a href="{{url_for('client.singin')}}"><img src="{{ url_for('static', filename='assets/carrinho.png')}}" alt="Imagem carrinho" width="21px" height="21px"></a></button>
+            <form class="d-flex" role="search" style="padding: 5px;">
+              <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit"><img src="{{url_for('static', filename='assets/lupa.png')}}" alt="Imagem pesquisa" width="15px" height="15px"></a></button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+          <h1>SSD 2 TB Kingston Fury Renegade, M.2 2280 PCIe, NVMe, Leitura: 7300MB/s e Gravação: 7000MB/s, Preto - SFYRD/2000G</h1>
+            <div class="col-md-6">
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="prod-img">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{{url_for('static', filename='assets/ssdfury1.jpeg')}}" class="d-block w-100" alt="Imagem do Produto">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{url_for('static', filename='assets/ssdfury2.jpeg')}}" class="d-block w-100" alt="Imagem do Produto" width="200" height="450">
+                  </div>
+                </div>
+              </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>O SSD Kingston Fury Renegade 2TB é uma solução de armazenamento de alta performance, ideal para gamers e entusiastas de hardware que buscam velocidade e eficiência. Com a tecnologia PCIe 4.0 NVMe, este SSD oferece tempos de carregamento rápidos e uma experiência de uso fluida.
+            </h3><br>
+                <div class="prod-txt">
+                  <h2 class="txt-sub"><span id="old-price">De R$1530,00</span></h2>
+                  <h2 class="txt-new"><span id="price">Por R$841,50</span></h2>
+                </div>
+                <br>
+                <div class="container-produto">
+                  <button class="btn btn-primary btn-lg" style="align-self: center;">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="prod-spec">
+    <p class="d-inline-flex gap-1">
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Especificações técnicas
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        <p>Capacidade: 2TB, proporcionando amplo espaço para armazenar jogos, aplicativos e arquivos grandes.</p>
+        <p>Velocidade: Leitura sequencial de até 7300MB/s e gravação sequencial de até 7000MB/s, garantindo transferências de dados extremamente rápidas.</p>
+        <p>Formato: M.2 2280, compatível com uma ampla gama de laptops e desktops.</p>
+        <p>Tecnologia: Equipado com controlador NVMe Gen 4x4 e 3D TLC NAND, oferecendo desempenho consistente e confiável.</p>
+        <p>Dissipação de Calor: Dissipador de calor em alumínio com perfil baixo, que ajuda a manter o SSD resfriado durante uso intenso.</p>
+        <p>Durabilidade: Alta resistência a choques e vibrações, ideal para ambientes de uso intensivo.</p>
+      </div>
+    </div>
+  </div>
+    <footer>
+      <div class="promo-timer">
+          <h2>Tempo restante para a promoção:</h2>
+          <div id="countdown"></div>
+      </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/timer.js')}}"></script>
+</body>
+</html>
