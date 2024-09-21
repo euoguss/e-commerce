@@ -63,9 +63,12 @@ class BancoDeDados:
             return None
     
     def addCart(self):
-        
+        if self.login != []:
+            print (f'{self.login["Cpf"]}')
+            cursor = self.conexao.cursor()
         self.conexao.close()
 
     def disconnect(self):
         self.conexao.close()
         print('Desconectado do banco')
+
