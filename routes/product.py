@@ -27,3 +27,34 @@ def fonte_for():
     # adicionar produtos no site - post
     return render_template('fonte.html')
 
+@product_route.route("/ram")
+def memory_ram():
+    # adicionar produtos no site - post
+    return render_template('ram.html')
+
+@product_route.route("/mother_board")
+def motherboard():
+    # adicionar produtos no site - post
+    return render_template('placa_mae.html')
+
+@product_route.route("/rtx")
+def graphicboard():
+    # adicionar produtos no site - post
+    return render_template('placa_video.html')
+
+@product_route.route("/corsair")
+def fonte_cor():
+    # adicionar produtos no site - post
+    return render_template('fonte_cor.html')
+
+@product_route.route("/nvme")
+def ssd_nvme():
+    # adicionar produtos no site - post
+    return render_template('ssd_nvme.html')
+
+@product_route.route("/amd")
+def proc_amd():
+    # adicionar produtos no site - post
+    return render_template('ryzen.html')
+
+
