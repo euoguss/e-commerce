@@ -1,7 +1,7 @@
 import mysql.connector
 class BancoDeDados:
     
-    def __init__(self, conexao = mysql.connector.connect(user='root', password='', host='localhost', database='mydb'), login = None):
+    def __init__(self, conexao = mysql.connector.connect(user='root', password='', host='localhost', database='mydb'), login = []):
         self.conexao = conexao
         self.login = login
         
@@ -39,6 +39,7 @@ class BancoDeDados:
                     self.login.append(d)
             print(f'Os dados são {self.login}')
             cursor.close()
+            return self.login
         except:
             print("Erro ao buscar o usuario")
 
@@ -46,22 +47,28 @@ class BancoDeDados:
 
     def verify(self):
         try:
-            values = self.login
-            # for v in values:
-            #     print(v)
-                # self.login.get(value).append(values[value])
+            if self.login != []:
+                values = self.login
+                # for v in values:
+                #     print(v)
+                    # self.login.get(value).append(values[value])
+                    
+                self.login = {'Cpf' : values[0], 'Nome' : values[1],'Email' : values[2],'Senha' : values[3], 'Tel' : values[4], 'Ender' : values[5], 'Nasc' : values[6]}
                 
-            self.login = {'Cpf' : values[0], 'Nome' : values[1],'Email' : values[2],'Senha' : values[3], 'Tel' : values[4], 'Ender' : values[5], 'Nasc' : values[6]}
-            
-            print(f'Login verificado com sucesso {self.login}')
-            return self.login
+                print(f'Login verificado com sucesso {self.login}')
+                return self.login
+            return None
         except:
             print('Erro ao verificar o login')
+            return None
     
     def addCart(self):
-        
+        if self.login != []:
+            print (f'{self.login["Cpf"]}')
+            cursor = self.conexao.cursor()
         self.conexao.close()
 
     def disconnect(self):
         self.conexao.close()
         print('Desconectado do banco')
+
