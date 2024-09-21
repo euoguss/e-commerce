@@ -52,23 +52,35 @@
 
       <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="{{url_for('static', filename='assets/1.jpeg')}}" class="d-block w-100" alt="Placa Mãe Asrock">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <a href="{{url_for('product.memory_ram')}}">
+            <img src="{{url_for('static', filename='assets/1.jpeg')}}" class="d-block w-100" alt="Memória RAM">
+            </a>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="{{url_for('static', filename='assets/2.jpeg')}}" class="d-block w-100" alt="Placa Mãe Asrock">
+            <a href="{{url_for('product.motherboard')}}">
+            <img src="{{url_for('static', filename='assets/2.jpeg')}}" class="d-block w-100" alt="Placa Mãe Asus">
+            </a>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="{{url_for('static', filename='assets/3.jpeg')}}" class="d-block w-100" alt="Placa Mãe Asrock">
+            <a href="{{url_for('product.graphicboard')}}">
+            <img src="{{url_for('static', filename='assets/3.jpeg')}}" class="d-block w-100" alt="Placa de Vídeo">
+            </a>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="{{url_for('static', filename='assets/4.jpeg')}}" class="d-block w-100" alt="Placa Mãe Asrock">
+            <a href="{{url_for('product.fonte_cor')}}">
+            <img src="{{url_for('static', filename='assets/4.jpeg')}}" class="d-block w-100" alt="Fonte Corsair">
+            </a>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="{{url_for('static', filename='assets/5.jpeg')}}" class="d-block w-100" alt="Placa Mãe Biostar">
+            <a href="{{url_for('product.ssd_nvme')}}">
+            <img src="{{url_for('static', filename='assets/5.jpeg')}}" class="d-block w-100" alt="SSD kingston">
+            </a>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="{{url_for('static', filename='assets/6.jpeg')}}" class="d-block w-100" alt="Placa Mãe Gigabyte">
+            <a href="{{url_for('product.proc_amd')}}">
+            <img src="{{url_for('static', filename='assets/6.jpeg')}}" class="d-block w-100" alt="Processador AMD">
+            </a>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -82,7 +94,7 @@
       </div>
       <br>
       <div class="card-container">
-        <div class="card" style="width: 18rem; padding: 20px;">
+        <div class="card" style="width: 18rem; padding: 20px; align-content: center;">
           <a class="link" href="{{url_for('product.gab_card')}}">
           <img src="{{url_for('static', filename='assets/gabinete1.jpeg')}}" class="card-img-top" alt="Gabinete">
           <div class="card-body">
