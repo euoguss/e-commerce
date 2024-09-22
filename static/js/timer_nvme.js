@@ -1,4 +1,4 @@
-const endDate = new Date("Sep 30, 2024 23:59:00").getTime();
+const endDate = new Date("Sep 30, 2024 14:22:00").getTime();
 
 const countdown = setInterval(() => {
     const now = new Date().getTime();
@@ -14,7 +14,7 @@ const countdown = setInterval(() => {
     if (distance < 0) {
         clearInterval(countdown);
         document.getElementById("countdown").innerHTML = "Promoção encerrada";
-        document.getElementById("price").innerHTML = "R$ 680,00";
+        document.getElementById("price").innerHTML = "R$ 1530,00";
         document.getElementById("old-price").style.display = "none";
     }
 }, 1000);

@@ -122,3 +122,28 @@ footer {
 .btn-primary {
   grid-column: 1 / -1;
 }
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: calc(100vh - 100px);
+  margin-top: 20px; 
+}
+
+.table {
+  width: 50%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(to right, #af0ddf, #20b2b6);
+}
+
+.table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
