@@ -1,10 +1,11 @@
 import mysql.connector
 class BancoDeDados:
     
-    def __init__(self, conexao = mysql.connector.connect(user='root', password='', host='localhost', database='mydb'), login = []):
+    def __init__(self, conexao = mysql.connector.connect(user='root', password='', host='localhost', database='mydb'), login = [], produtos = [], carrinho = []):
         self.conexao = conexao
         self.login = login
-        
+        self.produtos = produtos
+        self.carrinho = carrinho
 
     def connect(self):
         if self.conexao.is_connected():
@@ -22,18 +23,16 @@ class BancoDeDados:
             print(f'{cursor.rowcount} registro inserido.')
             cursor.close()
             return "Usuario inserido com sucesso"
-            ...
+        
         except:
-            return "Erro ao inserir o usuario"
-            ...
-        ...
+            print("Erro ao inserir o usuario")
+            return None
 
     def singin(self, values):
         cursor = self.conexao.cursor()
         try:
             sql = "SELECT * FROM clientes WHERE Email = %s AND Senha = %s"
             cursor.execute(sql, values)
-            self.login = []
             for row in cursor:
                 for d in row:
                     self.login.append(d)
@@ -42,6 +41,7 @@ class BancoDeDados:
             return self.login
         except:
             print("Erro ao buscar o usuario")
+            return None
 
     
 
@@ -49,9 +49,6 @@ class BancoDeDados:
         try:
             if self.login != []:
                 values = self.login
-                # for v in values:
-                #     print(v)
-                    # self.login.get(value).append(values[value])
                     
                 self.login = {'Cpf' : values[0], 'Nome' : values[1],'Email' : values[2],'Senha' : values[3], 'Tel' : values[4], 'Ender' : values[5], 'Nasc' : values[6]}
                 
@@ -61,14 +58,52 @@ class BancoDeDados:
         except:
             print('Erro ao verificar o login')
             return None
-    
-    def addCart(self):
-        if self.login != []:
-            print (f'{self.login["Cpf"]}')
-            cursor = self.conexao.cursor()
-        self.conexao.close()
 
     def disconnect(self):
         self.conexao.close()
         print('Desconectado do banco')
 
+    def returnProd(self, values):
+        cursor = self.conexao.cursor()
+        try:
+            print(values)
+            sql = "SELECT * FROM produtos WHERE CodProduto = %s"
+            cursor.execute(sql, (values,))
+            for row in cursor:
+                for d in row:
+                    self.produtos.append(d)
+            print(f'Os dados são {self.produtos}')
+            cursor.close()
+            return self.produtos
+        except:
+            print("Erro ao buscar o produto")
+            return None
+    
+    def addCart(self):
+        cursor = self.conexao.cursor()
+        if self.produtos != None:
+            try:
+                sql = "INSERT INTO carrinho(IdCarrinho, CodProduto, Quantidade, Preco) VALUES (%s, %s, %s, %s)"
+                values = (len(self.carrinho) + 1, self.produtos[0], self.produtos[5], self.produtos[3])
+                print(values)
+                cursor.execute(sql, values)
+                self.conexao.commit()
+                print(f'{cursor.rowcount} registro inserido.')
+                print("Produto inserido com sucesso")
+                print(self.carrinho)
+            except:
+                print("Erro ao inserir o produto")
+                return None
+
+    def addProd(self, values):
+        cursor = self.conexao.cursor()
+        try:
+            sql = "INSERT INTO produtos(CodProduto, Nome, Descricao, Preco, Categoria, Quantidade) VALUES (%s, %s, %s, %s, %s, %s)"
+            cursor.execute(sql, values)
+            self.conexao.commit()
+            print(f'{cursor.rowcount} registro inserido.')
+            cursor.close()
+            return "Produto inserido com sucesso"
+        except:
+            print("Erro ao inserir o produto")
+            return None

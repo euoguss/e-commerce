@@ -30,12 +30,12 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Armazenamentos</a></li>
                   <li><a class="dropdown-item" href="#">Fontes de alimentação</a></li>
-                  <li><a class="dropdown-item" href="#">Gabinetes</a></li>
-                  <li><a class="dropdown-item" href="#">Memórias RAM</a></li>
-                  <li><a class="dropdown-item" href="#">Placas mãe</a></li>
-                  <li><a class="dropdown-item" href="#">Processadores</a></li>
-                  <li><a class="dropdown-item" href="#">Placas de vídeo</a></li>
-                  <li><a class="dropdown-item" href="#">Refrigerações</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.gab_card')}}">Gabinetes</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.memory_ram')}}">Memórias RAM</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.motherboard')}}">Placas mãe</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.proc_amd')}}">Processadores</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.graphicboard')}}">Placas de vídeo</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.water_cooler')}}">Refrigerações</a></li>
                 </ul>
             </ul>
             <button class="btn btn-outline-success" type="submit"><a href="{{url_for('client.singin')}}"><img src="{{ url_for('static', filename='assets/carrinho.png')}}" alt="Imagem carrinho" width="21px" height="21px"></a></button>
@@ -47,6 +47,7 @@
           </div>
         </div>
     </nav>
+    <form action="">
     <div class="container mt-5">
         <div class="row">
           <h1>Gabinete Gamer Lian Li Dynamic Mini-X O11, PC Tower, ATX, Lateral em Vidro Temperado, Preto - O11DMINI-X</h1>
@@ -84,7 +85,7 @@
                 </div>
                 <br>
                 <div class="container-produto">
-                  <button class="btn btn-primary btn-lg" style="align-self: center;">Comprar</button>
+                  <button class="btn btn-primary btn-lg" style="align-self: center;" onclick="{{ url_for('home.home')}}">Comprar</button>
                 </div>
             </div>
         </div>
@@ -108,7 +109,7 @@
         <p>Filtros de Poeira: Filtros de poeira magnéticos instalados em todas as aberturas para ar, ajudando a manter o interior do gabinete limpo.</p>
       </div>
     </div>
-  </div>
+  </div></form>
     <footer>
       <div class="promo-timer">
           <h2>Tempo restante para a promoção:</h2>
