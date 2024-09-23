@@ -17,6 +17,14 @@ def add_prod():
         return render_template("form_add_prod.html")
     return render_template('form_add_prod.html')
 
+@product_route.route('/armazenamento')
+def arm():
+    return render_template('armazenamento.html')
+
+@product_route.route('/alimentacao')
+def alim():
+    return render_template('alimentacao.html')
+
 @product_route.route("/gab", methods=['GET', 'POST'])
 def gab_card():
     if request.method == "POST":
