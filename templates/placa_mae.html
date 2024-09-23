@@ -28,8 +28,8 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Todos produtos</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Armazenamentos</a></li>
-                  <li><a class="dropdown-item" href="#">Fontes de alimentação</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.arm' )}}">Armazenamentos</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.alim' )}}">Fontes de alimentação</a></li>
                   <li><a class="dropdown-item" href="{{ url_for('product.gab_card')}}">Gabinetes</a></li>
                   <li><a class="dropdown-item" href="{{ url_for('product.memory_ram')}}">Memórias RAM</a></li>
                   <li><a class="dropdown-item" href="{{ url_for('product.motherboard')}}">Placas mãe</a></li>
