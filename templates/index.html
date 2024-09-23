@@ -32,12 +32,12 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Armazenamentos</a></li>
                   <li><a class="dropdown-item" href="#">Fontes de alimentação</a></li>
-                  <li><a class="dropdown-item" href="#">Gabinetes</a></li>
-                  <li><a class="dropdown-item" href="#">Memórias RAM</a></li>
-                  <li><a class="dropdown-item" href="#">Placas mãe</a></li>
-                  <li><a class="dropdown-item" href="#">Processadores</a></li>
-                  <li><a class="dropdown-item" href="#">Placas de vídeo</a></li>
-                  <li><a class="dropdown-item" href="#">Refrigerações</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.gab_card')}}">Gabinetes</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.memory_ram')}}">Memórias RAM</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.motherboard')}}">Placas mãe</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.proc_amd')}}">Processadores</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.graphicboard')}}">Placas de vídeo</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('product.water_cooler')}}">Refrigerações</a></li>
                 </ul>
             </ul>
             <button class="btn btn-outline-success" type="submit"><a href="{{url_for('client.singin')}}"><img src="{{ url_for('static', filename='assets/carrinho.png')}}" alt="Imagem carrinho" width="21px" height="21px"></a></button>

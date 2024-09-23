@@ -8,10 +8,48 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Adicionando</title>
+    <title>Cadastrar-se</title>
   </head>
   <body>
-    <h1>Adicionar produtos</h1>
+    <h1 style="text-align: center;">Cadastro</h1>
+
+    
+    <!-- Cod = request.form['Cod'] ok
+        Nome = request.form['Nome'] ok
+        Desc = request.form['Desc'] ok
+        Preco = request.form['Preco'] ok
+        Categ = request.form['Categ'] ok
+        Quant = request.form['Quant'] ok -->
+
+     <form class="row g-3" style="margin-left: 20%; margin-right: 20%;" action="{{ url_for('product.add_prod')}}" method="POST">
+        <div class="col-12">
+          <label for="inputName" class="form-label">Nome</label>
+          <input type="text" name="Nome" class="form-control" placeholder="Digite o nome do produto">
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Código de indetificação</label>
+          <input type="number" name="Cod" class="form-control" placeholder="Digite o código do produto">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Categoria</label>
+          <input type="text" name="Categ" class="form-control" placeholder="Digite em qual categoria o produto se encaixa">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Descrição</label>
+          <input type="text" name="Desc" class="form-control" placeholder="Descreva com detalhes o produto">
+        </div>
+        <div class="col-md-6">
+          <label for="inputZip" class="form-label">Quantidade</label>
+          <input type="number" name="Quant" class="form-control" placeholder="Quantidade de produtos em estoque">
+        </div>
+        <div class="col-md-6">
+          <label for="inputZip" class="form-label">Preço</label>
+          <input type="number" name="Preco" class="form-control" placeholder="Digite o valor do produto">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary" style="margin-left: 40%; margin-right: 30%;">Cadastrar</button>
+        </div>
+      </form>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

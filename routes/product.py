@@ -1,15 +1,31 @@
-from flask import Flask, render_template, Blueprint
-
+from flask import Flask, render_template, Blueprint, request
+from database.database import BancoDeDados
+db = BancoDeDados()
 product_route = Blueprint("product", __name__)
 
-@product_route.route("/add")
+@product_route.route("/add", methods=['GET', 'POST'])
 def add_prod():
-    # adicionar produtos no site - post
-    return render_template('form_prod.html')
+    if request.method == "POST":
+        Cod = request.form['Cod']
+        Nome = request.form['Nome']
+        Desc = request.form['Desc']
+        Preco = request.form['Preco']
+        Categ = request.form['Categ']
+        Quant = request.form['Quant']
+        values = (int(Cod),Nome,Desc,float(Preco),Categ,int(Quant))
+        db.addProd(values)
+        return render_template("form_add_prod.html")
+    return render_template('form_add_prod.html')
 
-@product_route.route("/gab")
+@product_route.route("/gab", methods=['GET', 'POST'])
 def gab_card():
-    # adicionar produtos no site - post
+    if request.method == "POST":
+        values = (1)
+        prod = db.returnProd(values)
+        if prod == None:
+            return render_template("login.html")
+        db.addCart(prod)
+        return render_template("index.html")
     return render_template('gabinete.html')
 
 @product_route.route("/sata")
