@@ -47,4 +47,3 @@ def acount():
     if dt != None:
        return render_template("acount.html", dados = dt)
     return render_template("login.html")
-

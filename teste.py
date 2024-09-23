@@ -6,8 +6,10 @@ db.connect()
 val = ('dias.gustavof@gmail.com', 'Gusta20210')
 log = db.singin(val)
 db.verify()
-cod = '1'
-db.returnProd(cod)
+db.returnProd(6)
 db.addCart()
+db.returnProd(9)
+db.addCart()
+
 
 db.disconnect()

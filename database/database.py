@@ -1,7 +1,7 @@
 import mysql.connector
 class BancoDeDados:
     
-    def __init__(self, conexao = mysql.connector.connect(user='root', password='', host='localhost', database='mydb'), login = [], produtos = [], carrinho = []):
+    def __init__(self, conexao = mysql.connector.connect(user='root', password='', host='localhost', database='mydb'), login = [], produtos = [], carrinho = {}):
         self.conexao = conexao
         self.login = login
         self.produtos = produtos
@@ -84,13 +84,15 @@ class BancoDeDados:
         if self.produtos != None:
             try:
                 sql = "INSERT INTO carrinho(IdCarrinho, CodProduto, Quantidade, Preco) VALUES (%s, %s, %s, %s)"
-                values = (len(self.carrinho) + 1, self.produtos[0], self.produtos[5], self.produtos[3])
+                values = (len(self.carrinho) + 1, self.produtos[0], self.produtos[5], self.produtos[3])             
                 print(values)
                 cursor.execute(sql, values)
                 self.conexao.commit()
                 print(f'{cursor.rowcount} registro inserido.')
+                self.carrinho[self.produtos[1]] = values
                 print("Produto inserido com sucesso")
                 print(self.carrinho)
+                cursor.close()
             except:
                 print("Erro ao inserir o produto")
                 return None

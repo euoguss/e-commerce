@@ -30,47 +30,101 @@ def gab_card():
 
 @product_route.route("/sata")
 def ssd_sata():
-    # adicionar produtos no site - post
+    if request.method == "POST":
+        values = (2)
+        prod = db.returnProd(values)
+        if prod == None:
+            return render_template("login.html")
+        db.addCart(prod)
+        return render_template("index.html")
     return render_template('ssd_sata.html')
 
 @product_route.route("/watercooler")
 def water_cooler():
-    # adicionar produtos no site - post
+    if request.method == "POST":
+        values = (3)
+        prod = db.returnProd(values)
+        if prod == None:
+            return render_template("login.html")
+        db.addCart(prod)
+        return render_template("index.html")
     return render_template('watercooler.html')
 
 @product_route.route("/fonte_for")
 def fonte_for():
-    # adicionar produtos no site - post
+    if request.method == "POST":
+        values = (4)
+        prod = db.returnProd(values)
+        if prod == None:
+            return render_template("login.html")
+        db.addCart(prod)
+        return render_template("index.html")
     return render_template('fonte.html')
 
 @product_route.route("/ram")
 def memory_ram():
-    # adicionar produtos no site - post
+    if request.method == "POST":
+        values = (5)
+        prod = db.returnProd(values)
+        if prod == None:
+            return render_template("login.html")
+        db.addCart(prod)
+        return render_template("index.html")
     return render_template('ram.html')
 
 @product_route.route("/mother_board")
 def motherboard():
-    # adicionar produtos no site - post
+    if request.method == "POST":
+        values = (6)
+        prod = db.returnProd(values)
+        if prod == None:
+            return render_template("login.html")
+        db.addCart(prod)
+        return render_template("index.html")
     return render_template('placa_mae.html')
 
 @product_route.route("/rtx")
 def graphicboard():
-    # adicionar produtos no site - post
+    if request.method == "POST":
+        values = (7)
+        prod = db.returnProd(values)
+        if prod == None:
+            return render_template("login.html")
+        db.addCart(prod)
+        return render_template("index.html")
     return render_template('placa_video.html')
 
 @product_route.route("/corsair")
 def fonte_cor():
-    # adicionar produtos no site - post
+    if request.method == "POST":
+        values = (8)
+        prod = db.returnProd(values)
+        if prod == None:
+            return render_template("login.html")
+        db.addCart(prod)
+        return render_template("index.html")
     return render_template('fonte_cor.html')
 
 @product_route.route("/nvme")
 def ssd_nvme():
-    # adicionar produtos no site - post
+    if request.method == "POST":
+        values = (9)
+        prod = db.returnProd(values)
+        if prod == None:
+            return render_template("login.html")
+        db.addCart(prod)
+        return render_template("index.html")
     return render_template('ssd_nvme.html')
 
 @product_route.route("/amd")
 def proc_amd():
-    # adicionar produtos no site - post
+    if request.method == "POST":
+        values = (10)
+        prod = db.returnProd(values)
+        if prod == None:
+            return render_template("login.html")
+        db.addCart(prod)
+        return render_template("index.html")
     return render_template('ryzen.html')
 
 
