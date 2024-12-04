@@ -12,5 +12,5 @@ app.register_blueprint(home_route)
 app.register_blueprint(client_route, url_prefix='/client')
 app.register_blueprint(product_route, url_prefix='/product')
 
-app.run(debug=True)
+app.run(debug=True, host="0.0.0.0")
 db.disconnect()
